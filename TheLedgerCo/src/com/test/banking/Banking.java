@@ -5,6 +5,14 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+
+
+/*
+ *Assumptions made while designing , can be modified according to the requirement 
+ 1)same bank no loan again
+ 2)number of years to be selected as year only
+ 3)number of payment's per month (that is only one )
+ * */
 public class Banking {
 
 	public static void main(String[] args) {
@@ -13,7 +21,8 @@ public class Banking {
 		LinkedList<Bank> banks = new LinkedList<Bank>();
 		LinkedList<Loan> loans = null;
 		try {
-			fis = new FileInputStream("Z:\\sipp_test\\Test\\Eclipse\\TheLedgerCo\\src\\INPUTS.txt");
+			//Please specify the i/p file name better with fully qualified file path 
+			fis = new FileInputStream("C:\\Users\\cheth\\OneDrive\\Desktop\\GIT\\TheLedGerCo\\TheLedgerCo\\src\\INPUTS.txt");
 			sc = new Scanner(fis);
 			while (sc.hasNextLine()) {
 				String query = sc.nextLine();
